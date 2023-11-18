@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Wagner Cesar Vieira">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Agenda CRUD</title>
+
+    <!-- Google Fonts - Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Meu CSS -->
+    <link rel="stylesheet" href="css/illegal.css">
+
+    <!---->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+    <header>
+        <!-- Construçã da barra de navegação -->
+        <nav class="navbar navbar-expand-lg fixed-top bg-cor-menu">
+            <section class="container py-2">
+                <a href="" class="navbar-brand">
+                    <i class="bi bi-joystick"></i>
+                    <span>JP'S Games</span>
+                </a>
+
+                <!-- Definição do botão do menu hamburguer -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-items"
+                    aria-current="navbar" aria-controls="navbar-items" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="bi bi-menu-button-wide"></i>
+                </button>
+
+                <!-- Definindo os itens do menu -->
+                <section class="collapse navbar-collapse" id="navbar-items">
+                    <ul class="navbar-nav me-auto mb-0 mb-lg-0">
+                        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#topics-container" class="nav-link">Definição</a></li>
+                        <li class="nav-item"><a href="#cards-container" class="nav-link">Operações</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Sobre</a></li>
+                        <li class="nav-item"><a href="#footer" class="nav-link">Contato</a></li>
+                    </ul>
+                </section>
+            </section>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <!-- Início do slider -->
+        <section class="container" id="container-carousel">
+            <section class="carousel slide" id="slider" data-bs-ride="carousel" data-bs-interval="1000">
+                <section class="carousel-indicators">
+
+                    <button type="button" class="active" data-bs-target="#slider" data-bs-slide-to="0"
+                        aria-current="true" aria-label="Slide 1"></button>
+
+                    <button type="button" data-bs-target="#slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+                    <button type="button" data-bs-target="#slider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+                </section>
+
+                <section class="carousel-inner">
+
+                    <section class="carousel-item active">
+                        <img class="d-block w-100" src="images/carrossel1.jpeg" alt="">
+                        <section class="carousel-caption">
+                            <h4>Seu Lugar Para Jogos</h4>
+                            <a href="" class="btn btn-primary">Veja além</a>
+                        </section>
+                    </section>
+
+                    <section class="carousel-item">
+                        <img class="d-block w-100" src="images/carrossel2.jpeg" alt="">
+                        <section class="carousel-caption">
+                            <h4>Encontre Tudo o Que Precisar</h4>
+                            <a href="" class="btn btn-primary">Veja além</a>
+                        </section>
+                    </section>
+
+                    <section class="carousel-item">
+                        <img class="d-block w-100" src="images/carrossel3.jpeg" alt="">
+                        <section class="carousel-caption">
+                            <h4>E Participe da Comunidade</h4>
+                            <a href="" class="btn btn-primary">Veja além</a>
+                        </section>
+                    </section>
+
+                </section>
+            </section>
+            <!-- Fim do slider -->
+        </section>
+
+        <!-- Início do accordion -->
+        <section class="container" id="topics-container">
+
+            <section class="accordion" id="accordionPanelsStayOpenExample">
+                <section class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelCreate" aria-expanded="true" aria-controls="panelCreate">
+                            Se Cadastre
+                        </button>
+                    </h2>
+                    <section id="panelCreate" class="accordion-collapse collapse">
+                        <section class="accordion-body">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modalCreate">
+                                Cadastrar
+                            </button>
+                            <a href="#modalCreate" class="btn btn-success" data-bs-toggle="modal">Incluir</a>
+                        </section>
+                    </section>
+                </section>
+
+                <section class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelRetrieve" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            Exibir Conta
+                        </button>
+                    </h2>
+                    <section id="panelRetrieve" class="accordion-collapse collapse">
+                        <section class="accordion-body">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modalView">
+                                Listar
+                            </button>
+                            <a href="" class="btn btn-outline-primary">Exibir</a>
+                        </section>
+                    </section>
+                </section>
+
+                <section class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelUpdate" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            Editar Conta
+                        </button>
+                    </h2>
+                    <section id="panelUpdate" class="accordion-collapse collapse">
+                        <section class="accordion-body">
+                            <a href="" class="btn btn-warning">Atualizar</a>
+                            <a href="" class="btn btn-outline-warning">Alterar</a>
+                        </section>
+                    </section>
+                </section>
+
+                <section class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelDelete" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            Excluir Conta
+                        </button>
+                    </h2>
+                    <section id="panelDelete" class="accordion-collapse collapse">
+                        <section class="accordion-body">
+                            <a href="" class="btn btn-danger">Excluir</a>
+                            <a href="" class="btn btn-outline-danger">Apagar</a>
+                        </section>
+                    </section>
+                </section>
+
+            </section>
+            <!-- Fim do accordion -->
+        </section>
+
+        <!-- Início dos cards -->
+
+    <!-- Footer -->
+    <footer class="container-fluid bg-black" id="footer">
+        <section class="container">
+            <section class="row">
+                <!-- FOOTER TOP -->
+                <section class="col-12" id="footer-top">
+                    <section class="row justify-content-between">
+                        <section class="col-4">
+                            <h2>Agenda Crud</h2>
+                        </section>
+                        <section class="col-4" id="social-icons">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-youtube"></i>
+                            <i class="bi bi-twitter"></i>
+                        </section>
+                    </section>
+                </section>
+
+                <!-- FOOTER DETAILS -->
+                <section class="col-12" id="footer-details">
+                    <section class="row">
+                        <section class="col-12 col-md-4" id="news-container">
+                            <h4>Fique por dentro das novidades</h4>
+                            <p class="secondary-color">
+                                Inscreva-se para saber em primeira mão
+                            </p>
+                            <form>
+                                <section class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Digite o seu e-mail" />
+                                </section>
+                                <button class="btn btn-dark">Inscrever</button>
+                            </form>
+                        </section>
+                        <section class="col-12 col-md-3" id="contact-container">
+                            <h4>Formas de contato</h4>
+                            <p class="secondary-color">(17) 3392-1234</p>
+                            <p class="secondary-color">jpgames@gmail.com</p>
+                        </section>
+                        <section class="col-12 col-md-5" id="links-container">
+                            <embed type="text/html"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.460360770517!2d-48.50796188951947!3d-20.93401988061121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bbe4426cf78d4d%3A0xf2299afcfbf0457e!2sR.%20L%C3%BAcio%20Sarti%2C%20809%20-%20Parque%20Eldorado%2C%20Bebedouro%20-%20SP%2C%2014706-120!5e0!3m2!1spt-BR!2sbr!4v1699205882810!5m2!1spt-BR!2sbr"
+                                width="100%" height="100%" frameboard="0" style="border:0;" allowfullscreen=""
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </section>
+                    </section>
+                </section>
+
+            </section>
+        </section>
+    </footer>
+
+    <!-- Modais -->
+    <!-- Visualização dos elementos -->
+    <section class="modal" id="modalView" tabindex="-1">
+        <section class="modal-dialog modal-xl">
+            <section class="modal-content">
+                <section class="modal-header">
+                    <h5 class="modal-title">Relação de clientes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </section>
+                <section class="modal-body bg-cor-menu">
+                    <table class="table">
+                        <tbody>
+                            <ul class="list-group list-group-horizontal md-6">
+                                <li class="list-group-item">Email</li>
+                                <li class="list-group-item">joaolima30@gmail.com</li>
+                              </ul>
+                              <ul class="list-group list-group-horizontal-lg md-6">
+                                <li class="list-group-item">Nome</li>
+                                <li class="list-group-item">João Pedro de Lima Santos</li>
+                              </ul>
+                              <ul class="list-group list-group-horizontal-lg">
+                                <li class="list-group-item">Data de Nasc.</li>
+                                <li class="list-group-item">15/12/2006</li>
+                              </ul>
+                              <ul class="list-group list-group-horizontal-lg">
+                                <li class="list-group-item">Gamer Tag</li>
+                                <li class="list-group-item">jp1235Lima</li>
+                              </ul>
+                              <ul class="list-group list-group-horizontal-lg">
+                                <li class="list-group-item">CEP</li>
+                                <li class="list-group-item">14214-146</li>
+                              </ul>
+                              <ul class="list-group list-group-horizontal-lg">
+                                <li class="list-group-item">Usuário</li>
+                                <li class="list-group-item">jp1235Lima</li>
+                              </ul>
+                              <ul class="list-group list-group-horizontal-lg">
+                                <li class="list-group-item">Console</li>
+                                <li class="list-group-item">PlayStation 4</li>
+                              </ul>
+                        </tbody>
+                    </table>
+
+                    <table class="table">
+                        <tbody>
+                            <ul class="list-group list-group-horizontal md-6">
+                                <li class="list-group-item">Email</li>
+                                <li class="list-group-item">joaospinda30@gmail.com</li>
+                              </ul>
+                              <ul class="list-group list-group-horizontal-lg md-6">
+                                <li class="list-group-item">Nome</li>
+                                <li class="list-group-item">João Pedro Paulino Spinda</li>
+                              </ul>
+                              <ul class="list-group list-group-horizontal-lg">
+                                <li class="list-group-item">Data de Nasc.</li>
+                                <li class="list-group-item">05/10/2006</li>
+                              </ul>
+                              <ul class="list-group list-group-horizontal-lg">
+                                <li class="list-group-item">Gamer Tag</li>
+                                <li class="list-group-item">JP Spinda</li>
+                              </ul>
+                              <ul class="list-group list-group-horizontal-lg">
+                                <li class="list-group-item">CEP</li>
+                                <li class="list-group-item">13625-146</li>
+                              </ul>
+                              <ul class="list-group list-group-horizontal-lg">
+                                <li class="list-group-item">Usuário</li>
+                                <li class="list-group-item">JP Spinda</li>
+                              </ul>
+                              <ul class="list-group list-group-horizontal-lg">
+                                <li class="list-group-item">Console</li>
+                                <li class="list-group-item">Nintendo Switch</li>
+                              </ul>
+                        </tbody>
+                    </table>
+
+                </section>
+
+                <section class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar</button>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <!-- Modal -->
+    <section class="modal fade" id="modalCreate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <section class="modal-dialog modal-dialog-centered modal-lg">
+            <section class="modal-content">
+                <section class="modal-header">
+                    <h1 class="modal-title fs-5" id="mensagem">Nova Conta</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </section>
+                <section class="modal-body bg-crud">
+                    <form>
+                        <section class="form-group row">
+                            <section class="form-group col-md-6">
+                                <label for="inputCPF">Email</label>
+                                <input type="email" class="form-control" id="inputEmail" data-index="new"
+                                    placeholder="Email" required>
+                            </section>
+
+                            <section class="form-group col-md-6">
+                                <label for="inputNome">Nome</label>
+                                <input type="text" class="form-control" id="inputNome" data-index="new"
+                                    placeholder="Nome">
+                            </section>
+                        </section>
+
+                        <section class="form-group row mt-4">
+                            <section class="form-group col-md-3">
+                                <label for="inputDataNasc">Data de nascimento</label>
+                                <input type="date" class="form-control" data-index="new" id="inputDataNasc">
+                            </section>
+
+                            <section class="form-group col-md-6">
+                                <label for="inputTag">GamerTag</label>
+                                <input type="text" class="form-control" data-index="new" id="inputTag" placeholder="GamerTag">
+                            </section>
+
+                            <section class="form-group col-md-3">
+                                <label for="inputCEP">CEP</label>
+                                <input type="text" class="form-control" data-index="new" id="inputCEP" placeholder="CEP">
+                            </section>
+                        </section>
+
+                        <section class="form-group row mt-4">
+                            <section class="form-group col-md-6">
+                                <label for="inputUsuario">Nome de Usuário</label>
+                                <input type="text" class="form-control" data-index="new" id="inputUsuario" placeholder="Usuário">
+                            </section>
+
+                            <section class="form-group col-md-6">
+                                <label for="inputConsole">Console</label>
+                                <select id="inputConsole" data-index="new" class="form-control">
+                                    <option selected></option>
+                                    <option>PlayStation 5</option>
+                                    <option>Xbox Series X/S</option>
+                                    <option>Nintendo Switch</option>
+                                    <option>PlayStation 4</option>
+                                    <option>Xbox One</option>
+                                </select>
+                            </section>
+                        </section>
+                    </form>
+                </section>
+
+                <section class="modal-footer">
+                    <button type="reset" class="btn btn-danger" id="limpar">Limpar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn btn-primary" id="salvar">Salvar</button>
+                </section>
+            </section>
+        </section>
+    </section>
+    <!-- Inclusão do Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- Inclusão das bibliotecas JQuery e JQuery Mask -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+    <!-- Meu JS -->
+    <script src="js/illegal.js"></script>
+</body>
+
+</html>
